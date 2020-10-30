@@ -1,3 +1,6 @@
-# My Frontend Boilerplate
+```
+yarn install
+yarn dev
+```
 
-A simple starter project to work on demo code that will never see production.
+Edit src/index.html and change the <video> element to one using a remote video if you do not have the file locally.
