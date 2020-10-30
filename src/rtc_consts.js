@@ -1,16 +1,16 @@
 module.exports = {
   ENCODINGS: [
     {
-      rid: 'r0',
-      scalabilityMode: 'S1T3',
-      scaleResolutionDownBy: 2,
-      maxBitrate: 300000,
-    },
-    {
       rid: 'r1',
       scalabilityMode: 'S1T3',
       scaleResolutionDownBy: 1,
       maxBitrate: 600000,
+    },
+    {
+      rid: 'r0',
+      scalabilityMode: 'S1T3',
+      scaleResolutionDownBy: 2,
+      maxBitrate: 300000,
     },
   ],
 

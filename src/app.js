@@ -8,8 +8,10 @@ const canvas = document.querySelector('canvas');
 
 const ctx = canvas.getContext('2d');
 
-const remoteFull = document.getElementById('remote-full');
+const remote = document.getElementById('remote');
 const source = document.getElementById('source');
+
+let peerConnectionActive = false;
 
 source.addEventListener('loadedmetadata', function () {
   console.log(`Remote video videoWidth: ${this.videoWidth}px,  videoHeight: ${this.videoHeight}px`);
@@ -23,7 +25,11 @@ source.addEventListener(
     canvas.width = cw;
     canvas.height = ch;
     draw(this, ctx, cw, ch);
-    startPeerConnection();
+
+    if (!peerConnectionActive) {
+      startPeerConnection();
+      peerConnectionActive = true;
+    }
   },
   0
 );
@@ -47,7 +53,7 @@ async function startPeerConnection() {
   window.yourConnection = yourConnection;
 
   theirConnection.onaddstream = function (e) {
-    remoteFull.srcObject = e.stream;
+    remote.srcObject = e.stream;
   };
 
   yourConnection.onicecandidate = function (event) {
