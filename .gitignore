@@ -20,3 +20,4 @@ npm-debug.log
 
 node_modules/
 dist/
+src/images/*.mp4

@@ -7,11 +7,24 @@
   <body>
     <div class="container mx-auto px-4">
       <h1 class="text-4xl tracking-tight text-center font-extrabold text-gray-900">
-        Front-end Template
+        RTC Encoder Testing
       </h1>
 
-      <div class="flex flex-row justify-center">
-        <img src="images/test.gif"/>
+      <div class="flex flex-col justify-between">
+        <div>
+          <h2>Source Video</h2>
+          <video playsinline muted src="images/bbb.mp4" id="source" controls></video>
+        </div>
+
+        <div>
+          <h2>Canvas</h2>
+          <canvas></canvas>
+        </div>
+
+        <div>
+          <h2>Remote Video</h2>
+          <video playsinline autoplay muted id="remote"></video>
+        </div>
       </div>
     </div>
   </body>

@@ -9,6 +9,9 @@
     "> 5%"
   ],
   "dependencies": {
+    "core-js": "^3.6.5",
+    "regenerator-runtime": "^0.13.7",
+    "sdp-transform": "^2.14.0",
     "tailwindcss": "^1.9.6"
   },
   "devDependencies": {
@@ -30,6 +33,7 @@
     "html-webpack-plugin": "^4.5.0",
     "postcss": "^8.1.4",
     "postcss-loader": "^4.0.4",
+    "prettier": "^2.1.2",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.3.1",
